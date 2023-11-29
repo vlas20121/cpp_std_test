@@ -1,0 +1,66 @@
+﻿New features of C++: key features of C++20
+
+1 c++ evolution(https://en.cppreference.com/w/cpp/language/history)
+	1 c++ evolution.png
+	Picture from Grimm Rainer book "C++20 - Get the Details"(https://leanpub.com/c20).
+
+2 Feature testing macros (https://en.cppreference.com/w/cpp/feature_test)
+	The standard defines a set of preprocessor macros corresponding to 
+		C++ language and library features introduced in C++11 or later.
+		Full list of all current macros: 
+	examples macro 
+		__cpp_concepts	-Concepts
+		__cpp_lib_concepts	-Standard library concepts
+		__cpp_impl_coroutine	-Coroutines (compiler support)
+2.1 Compiler support for C++20(https://en.cppreference.com/w/cpp/compiler_support/20)
+
+3 features of c++20 - grouping by topics
+	new features of c++20.png
+	Picture from Grimm Rainer book "C++20 - Get the Details"(https://leanpub.com/c20).
+
+4 The Big Four of C++20
+4.1 Ranges library(https://en.cppreference.com/w/cpp/ranges)
+	The ranges library provides components for dealing with ranges of elements, including a variety of view adapters.
+4.2 Coroutines (https://en.cppreference.com/w/cpp/language/coroutines)
+	A coroutine is a function that can suspend execution to be resumed later. 
+4.2 Concepts https://en.cppreference.com/w/cpp/language/basic_concepts
+	Concepts library (https://en.cppreference.com/w/cpp/concepts)
+4.2 Modules https://en.cppreference.com/w/cpp/language/modules
+	Modules are a language feature to share declarations and definitions across translation units. They are an alternative to some use cases of header files.
+	Modules are orthogonal to namespaces.
+
+5 Core Language
+5.1 spaceship operator,3-way comparisons(https://en.cppreference.com/w/cpp/language/default_comparisons)
+5.2 aggregate initialization(https://en.cppreference.com/w/cpp/language/direct_initialization)
+5.3 consteval(https://en.cppreference.com/w/cpp/language/consteval),constinit(https://en.cppreference.com/w/cpp/language/constinit)
+5.4 Template improvements(https://www.modernescpp.com/index.php/template-improvements-with-c-20)
+5.5 Lambda improvements(https://www.modernescpp.com/index.php/more-lambdas-features-with-c-20)
+
+6 Library
+6.1 std::span library(https://en.cppreference.com/w/cpp/container/span)
+6.2 Container improvements(https://www.modernescpp.com/index.php/more-convenience-functions-for-containers-with-c-20)
+6.3 Arithmetic utilities(https://www.modernescpp.com/index.php/safe-comparisons-of-integrals-with-c-20)
+	mathematical constants
+	bit manipulation(https://www.modernescpp.com/index.php/bit-manipulation-with-c-20)
+6.4 Calendar and time zone library(https://www.modernescpp.com/index.php/calendar-and-time-zone-in-c-20-time-zones)
+6.5 Formatting library(https://en.cppreference.com/w/cpp/utility/format)
+
+7 Concurrency
+7.1 Atomics(https://www.modernescpp.com/index.php/synchronization-with-atomics-in-c-20)
+7.2 Semaphores(https://www.modernescpp.com/index.php/semaphores-in-c-20)
+7.3 Latches and bariers
+	latches (https://www.modernescpp.com/index.php/latches-in-c-20)
+	barriers (https://en.cppreference.com/w/cpp/thread/barrier , https://www.modernescpp.com/index.php/barriers-in-c-20)
+
+7.4 Cooperative Interruption(https://www.modernescpp.com/index.php/cooperative-interruption-of-a-thread-in-c-20)
+7.5 std::jthread(https://en.cppreference.com/w/cpp/thread/jthread)
+7.6 Synchronized outputstreams(https://www.modernescpp.com/index.php/synchronized-outputstreams)
+
+8 project with examples:
+	hg clone --verbose https://hg.ipruzavin.ru/TestGroup/cpp_std_test "F:\HG\TestGroup\cpp_std_test"
+
+9 used materals:
+	C++ reference: https://en.cppreference.com/
+	Grimm Rainer's book "c++20 - Get the Details"(https://leanpub.com/c20).
+	Grimm Rainer's site "modernes c++": https://www.modernescpp.com/index.php/category/c-20
+	Grimm Rainer's site "all in one c++20 guide": https://www.educative.io/courses/all-in-one-guide-cpp-20
