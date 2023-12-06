@@ -1,15 +1,17 @@
 #include <iostream>
 
-namespace ns1{
+namespace tns1{
 	class A{};
+	template<class A>
 	void f(const A& v)
 	{
 		std::cout << "ns1::f" << "\n";
 	}
 };
 
-namespace ns2{
+namespace tns2{
 	class A{};
+	template<class A>
 	void f(const A& v)
 	{
 		std::cout << "ns2::f" << "\n";
@@ -17,19 +19,20 @@ namespace ns2{
 };
 
 template<class T>
-void f(const T& t)
+void f1(const T& t)
 {
 	std::cout << "::f" << "\n";
 }
 
 void geom_test();
-int main_template();
-int main()
+
+//using namespace tns1;
+//using namespace tns2;
+
+int main_template()
 {
-	f(10);
-	f(ns1::A());
-	f(ns2::A());
-	main_template();
-	geom_test();
+	f1(10);
+	f(tns1::A());
+	f(tns2::A());
 	return 0;
 }
