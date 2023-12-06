@@ -2,4 +2,8 @@
 
 set(CMAKE_CXX_STANDARD 20)
 project(test)
-add_executable(test test.cpp)
+
+file(GLOB H "*.h")
+file(GLOB CPP "*.cpp")
+
+add_executable(test ${CPP} ${H})

@@ -22,9 +22,12 @@ void f(const T& t)
 	std::cout << "::f" << "\n";
 }
 
+void geom_test();
+
 int main()
 {
 	f(10);
 	f(ns1::A());
 	f(ns2::A());
+	geom_test();
 }
