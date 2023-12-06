@@ -139,4 +139,4 @@ void geom_test()
     dump(vec2d{ 1, 1 } + vec2d{ 2, 2 });
 
     dump(vec3d{ 0, 0, 0 });
-}
+    dump(vec3d{ 1, 2, 3 }*3.);}
