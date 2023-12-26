@@ -1,5 +1,6 @@
 ﻿#include <iostream>
 #include <array>
+#include <cassert>
 using namespace std;
 
 namespace Geom
@@ -62,7 +63,7 @@ namespace Geom
             ret[i] = -a[i];
         return ret;
     }
-    /// @brief dot product
+    /// @brief dot product: https://billcookmath.com/papers/2012-09_nD_pythag_talk.pdf 
     template<class VEC, class T = VEC::value_type>
     inline T dot(const VEC& a, const VEC& b)
     {
@@ -71,20 +72,28 @@ namespace Geom
             ret += a[i] * b[i];
         return ret;
     }
-    /// @brief cross product https://billcookmath.com/papers/2012-09_nD_pythag_talk.pdf
+    /// @brief cross product: https://billcookmath.com/papers/2012-09_nD_pythag_talk.pdf
     /// @param a 
     /// @param b 
     /// @return 
     template<class VEC, class T = VEC::value_type>
-    inline VEC cross(const VEC& v, const VEC& w)
+    inline VEC cross3(const VEC& v, const VEC& w)
     {
-        //3d: (v x W)={v2w3 − v3w2, −(v1w3 − v3w1), v1w2 − v2w1}
+        //3d: (v x w={v2w3 - 3w2, -(v1w3 - v3w1), v1w2 - v2w1}
         assert(v.size() == 3);
         VEC ret{
             v[1] * w[2] - v[2] * w[1],
             -(v[0] * w[2] - v[2] * w[0]),
             v[0] * w[1] - v[1] * w[0]
         };
+        return ret;
+    }
+    template<class VEC, class T = VEC::value_type>
+    inline VEC cross2(const VEC& v)
+    {
+        //2: (x v={v2, -v1}
+        assert(v.size() == 2);
+        VEC ret{v[1],-v[0]};
         return ret;
     }
     template<class VEC, class T = VEC::value_type>
@@ -139,4 +148,7 @@ void geom_test()
     dump(vec2d{ 1, 1 } + vec2d{ 2, 2 });
 
     dump(vec3d{ 0, 0, 0 });
-    dump(vec3d{ 1, 2, 3 }*3.);}
+    dump(vec3d{ 1, 2, 3 }*3.);
+    cout << "cross2(vec2d{ 1, 2})=";
+    dump(cross2(vec2d{ 1, 2}));
+}
