@@ -139,7 +139,7 @@ using namespace Geom;
 
 void geom_test()
 {
-	cout << "geom_test()\n";
+    cout << "geom_test()\n";
     using vec2d = Geom::vec<double, 2>;
     using vec3d = Geom::vec<double, 3>;
     vec2d v={0};
@@ -149,6 +149,7 @@ void geom_test()
 
     dump(vec3d{ 0, 0, 0 });
     dump(vec3d{ 1, 2, 3 }*3.);
-    cout << "cross2(vec2d{ 1, 2})=";
-    dump(cross2(vec2d{ 1, 2}));
+    cout << "cross2(vec2d{ 1, 2})=";dump(cross2(vec2d{ 1, 2}));
+    cout << "cross3(vec3d{ 1, 0, 0 },vec3d{ 0, 0, 1})=";dump(cross3(vec3d{ 1, 0, 0 },vec3d{ 0, 0, 1}));
 }
+
